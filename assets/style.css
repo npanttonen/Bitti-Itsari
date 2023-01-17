@@ -28,3 +28,19 @@ z-index: 1; /* Stay on top */
 top: 0; /* Stay at the top */
 overflow-x: hidden; /* Disable horizontal scroll */
 }
+a:link {
+  text-decoration:none;
+  color: rgb(255, 255, 255);
+}
+a:visited {
+  text-decoration:none;
+  color: rgb(255, 255, 255);
+}
+a:hover {
+  text-decoration:none;
+  color: rgb(216, 32, 124);
+}
+a:active {
+  text-decoration:none;
+  color: blue;
+}
