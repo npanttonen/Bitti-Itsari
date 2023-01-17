@@ -6,8 +6,10 @@
 header{
 text-align: center;
   display: flex;
-        flex-wrap: wrap;
-        background-color: rgba(9, 9, 9, 0.356);
+      flex-wrap: wrap;        
+      background-color: rgba(9, 9, 9, 0.356);
+      
+  
         
 }
 a:link {
