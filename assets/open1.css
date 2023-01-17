@@ -1,0 +1,45 @@
+h1{
+    color:rgb(126, 4, 4);
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: solid;
+    align-items: stretch;
+    padding:0px;
+}
+
+main{
+    display: flex;
+    
+}
+header {
+    background: rgba(134, 41, 4, 0.968);
+    height: 40px;
+   padding: 0px;
+     align-items: stretch;
+    }
+
+    
+body {
+    margin: 0;
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    
+    }
+    h3{
+        background: rgba(200, 189, 184, 0.681);
+        height: 40px;
+        
+         align-items: stretch;
+         
+        margin: 0;
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    position: fixed;
+    }
+
+  
