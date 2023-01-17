@@ -25,3 +25,8 @@ a:hover {
 a:active {
   color: blue;
 }
+.thin{
+  width: 1000px;
+  height: 100px;
+  
+}
