@@ -25,11 +25,11 @@ hh{
     top: 0; /* Stay at the top */
     position: fixed;
 }
-img{
+kuva img{
   width: 105%;
 }
 h3{
-background-color: #a43131;
+  background: linear-gradient(to bottom, #a43131 0%, #551010 700%);
 margin: 0;
 z-index: 1; /* Stay on top */
 top: 0; /* Stay at the top */
