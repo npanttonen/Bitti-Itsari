@@ -17,7 +17,7 @@ hh{
   header {
     padding: 5px;
     width: 100%;
-   background: linear-gradient(to bottom, #a43131 0%, #540404 100%);
+    background-image: radial-gradient(circle, #dbcffb, #c8ccff, #b0caff, #93c8ff, #6fc7ff, #56bcff, #38b1ff, #00a5ff, #0089ff, #006afa, #0046ed, #2b00d7);
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     position: fixed;
@@ -47,11 +47,11 @@ overflow-x: hidden; /* Disable horizontal scroll */
 }
 a:link {
   text-decoration:none;
-  color: rgb(255, 255, 255);
+  color: rgb(49, 13, 178);
 }
 a:visited {
   text-decoration:none;
-  color: rgb(255, 255, 255);
+  color: rgb(49, 13, 178);
 }
 a:hover {
   text-decoration:none;
