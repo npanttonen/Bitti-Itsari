@@ -21,10 +21,3 @@
 img{
   width: 105%;
 }
-h3{
-background-color: #a43131;
-margin: 0;
-z-index: 1; /* Stay on top */
-top: 0; /* Stay at the top */
-overflow-x: hidden; /* Disable horizontal scroll */
-}
