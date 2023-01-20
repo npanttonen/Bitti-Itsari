@@ -55,7 +55,8 @@ a:visited {
 }
 a:hover {
   text-decoration:none;
-  color: rgb(216, 32, 124);
+  color: rgb(66, 32, 216);
+  text-shadow: 0 0 5px #00ccff;
 }
 a:active {
   text-decoration:none;
