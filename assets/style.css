@@ -9,11 +9,6 @@
 }
 
 /** Navigation bar - element **/
-hh{
-  padding: 12px;
-    width: 100%;
-    background-color: #a43131;
-}
   header {
     padding: 5px;
     width: 100%;
@@ -24,10 +19,7 @@ hh{
     align-items: center;
     text-align: center;
 }
-#sodexo1{
-  float: left;
-  width: 150px;
-}
+
 h3{
   float: center;
   font-family: 'Times New Roman', Times, serif;
@@ -71,6 +63,22 @@ main{
   padding: 5%;
   background-image: radial-gradient(circle, #0089ff, #006afa, #0046ed, #2b00d7);
 }
+
+/* Text style */
+h1{
+  font-size: 48px;
+}
+h2{
+  font-size: 30px;
+}
+p{
+  font-size: 15px; 
+}
+h1,h2,p{
+  font-family: 'Times New Roman', Times, serif;
+  color:aliceblue;
+}
+
 .imgBlock {
   width:150px;
   height:150px;
