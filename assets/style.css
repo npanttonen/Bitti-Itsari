@@ -142,3 +142,15 @@ footer{
   list-style-type: none; /* Remove bullets */
   text-align: left;
 }
+
+ul {
+  list-style: none; 
+}
+lt{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
+li{
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+}
