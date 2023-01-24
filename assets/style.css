@@ -82,7 +82,7 @@ h2{
 p{
   font-size: 22px; 
 }
-h1,h2,p{
+h1,h2,p,li{
   font-family: 'Times New Roman', Times, serif;
   color:aliceblue;
 }
@@ -145,12 +145,4 @@ footer{
 
 ul {
   list-style: none; 
-}
-lt{
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 24px;
-}
-li{
-  color: #000;
-  font-family: 'Times New Roman', Times, serif;
 }
