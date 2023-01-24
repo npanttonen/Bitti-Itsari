@@ -146,13 +146,13 @@ text-align: left;
 
 ul {
 list-style: none; 
-text-align: center;
+text-align: left;
 }
 lt{
-font-family: 'Times New Roman', Times, serif;
-font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
 }
 li{
-color: #000;
-font-family: 'Times New Roman', Times, serif;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
 }
