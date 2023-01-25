@@ -1,0 +1,158 @@
+body{
+  overflow-x: hidden;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-image: url("/assets/images/moroccan-flower.png");
+  cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeHh4/3h4eP94eHj/eHh4/3h4eP94eHj/eHh4/3h4eP94eHj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeHh4/3h4eP/a2tr/2tra/9ra2v/a2tr/2tra/9ra2v//////w8PD/8PDw/94eHj/eHh4/3h4eP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHh4eP//////7+/v/v///////////////////////////////9ra2v/a2tr/2tra/9ra2v/Dw8P/w8PD/3h4eP94eHj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4eHj/w8PD////////////////////////////////////////////////////////////2tra/9ra2v/a2tr/w8PD/8PDw/94eHj/eHh4/3h4eP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeHh4/8PDw//a2tr//////////////////////////////////////////////////////////////////////9ra2v/a2tr/2tra/8PDw//Dw8P/w8PD/3h4eP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHh4eP/Dw8P/2tra//////////////////////////////////////////////////////////////////////////////////////94eHj/2tra///////a2tr/w8PD/3h4eP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4eHj/w8PD/9ra2v/a2tr/////////////////////////////////////////////////////////////////////////////////7+/v/sPDw/94eHj/eHh4///////a2tr/w8PD/3h4eP8AAAAAAAAAAAAAAAAAAAAAAAAAAHh4eP/Dw8P/2tra////////////////////////////////////////////////////////////////////////////////////////////w8PD/3h4eP8AAAAAeHh4///////a2tr/w8PD/3h4eP8AAAAAAAAAAAAAAAAAAAAAeHh4/8PDw/////////////////////////////z8/f/////////////////////////////////////////////////////////////////a2tr/eHh4/wAAAAAAAAAAeHh4/9ra2v/Dw8P/eHh4/wAAAAAAAAAAAAAAAAAAAAB4eHj/2tra/////////////////zI5VP8yOVT/MjlU/zI5VP8yOVT/MjlU/zI5VP8yOVT/MjlU/zI5VP8yOVT/8/T3/////////////////9ra2v94eHj/AAAAAAAAAAB4eHj/2tra/8PDw/94eHj/AAAAAAAAAAAAAAAAAAAAAHh4eP/a2tr///////////8yOVT/MjlU/0FIaf9BSGn/QUhp/0FIaf9BSGn/QUhp/0FIaf9BSGn/QUhp/0FIaf8yOVT/MjlU/////////////////8PDw/94eHj/eHh4/9ra2v/a2tr/w8PD/3h4eP8AAAAAAAAAAAAAAAAAAAAAeHh4/9ra2v//////7e7y/zI5VP+Kl9b/QUhp/1JbhP/U1P//prT//5up7/+Kl9b/doG4/1JbhP9SW4T/m6nv/0FIaf8yOVT/9fb4///////////////////////a2tr/2tra/8PDw//Dw8P/eHh4/wAAAAAAAAAAAAAAAAAAAAB4eHj/2tra//////8yOVT/prT//0FIaf9SW4T/1NT//1JbhP9SW4T/UluE/1JbhP9SW4T/doG4/1Jb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'), auto; 
+}
+
+/** Navigation bar - element **/
+header {
+  padding: 5px;
+  width: 100%;
+  background-image: radial-gradient(circle, #dbcffb, #c8ccff, #b0caff, #93c8ff, #6fc7ff, #56bcff, #38b1ff, #00a5ff, #0089ff, #006afa, #0046ed, #2b00d7);
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  position: fixed;
+  align-items: center;
+  text-align: center;
+}
+
+h3{
+float: center;
+font-family: 'Times New Roman', Times, serif;
+font-size: 24px;
+
+/** Navigation bar - coffebeans **/
+}
+kuva img{
+width: 105%;
+}
+h3{
+background-color: rgba(0,0,0,.0);
+margin: 0;
+z-index: 1; /* Stay on top */
+top: 0; /* Stay at the top */
+overflow-x: hidden; /* Disable horizontal scroll */
+}
+a:link {
+text-decoration:none;
+color: rgb(49, 13, 178);
+}
+a:visited {
+text-decoration:none;
+color: rgb(49, 13, 178);
+}
+a:hover {
+text-decoration:none;
+color: rgb(66, 32, 216);
+text-shadow: 0 0 5px #00ccff;
+}
+a:active {
+text-decoration:none;
+color: blue;
+}
+
+main{
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 5px;
+margin-bottom: 5px;
+padding: 5%;
+background-image: radial-gradient(circle, #0089ff, #006afa, #0046ed, #2b00d7);
+}
+
+/* Home */
+.articleimg{
+float: right;
+width: 30%;
+margin-left: 15px;
+}
+
+
+/* Text style */
+h1{
+font-size: 48px;
+text-align: center;
+}
+h2{
+font-size: 30px;
+}
+p{
+font-size: 22px; 
+}
+h1,h2,pm, li{
+font-family: 'Times New Roman', Times, serif;
+color:rgb(0, 0, 0);
+}
+li{
+font-size: 18px; 
+}
+
+/* Menu */
+.imgBlock {
+width:150px;
+height:150px;
+margin:1px;
+padding:4px;
+}
+
+.imgBlock img{
+height:100%;
+width:100%;
+display:block;
+object-fit:fill;
+object-position: center; 
+}
+
+.tuotetieto {
+border: none;
+outline: 0;
+color: white;
+background-color: #000;
+text-align: center;
+width: 100%;
+font-size: 18px;
+}
+
+.hinta {
+border: none;
+outline: 0;
+color: white;
+background-color: #000;
+text-align: center;
+width: 100%;
+font-size: 18px;
+}
+.tuotekortti{
+display: flex;
+flex-direction:row;
+}
+
+footer{
+padding: 5px;
+  width: 100%;
+  background-image: radial-gradient(circle, #6fc7ff, #56bcff, #38b1ff, #00a5ff, #0089ff, #006afa, #0046ed, #2b00d7);
+  bottom: 0; /* Stay at the top */
+  align-items: center;
+  text-align: center;
+}
+.list{
+list-style-type: none; /* Remove bullets */
+text-align: left;
+}
+
+ul {
+list-style: none; 
+text-align: center;
+}
+lt{
+font-family: 'Times New Roman', Times, serif;
+font-size: 24px;
+}
+li{
+color: #000;
+font-family: 'Times New Roman', Times, serif;
+}
