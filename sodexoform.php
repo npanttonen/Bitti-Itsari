@@ -110,7 +110,7 @@ echo $gender;
 <?php
 try{
 
-    $yhteys=mysqli_connect("db","root","password","sodexo");
+    $yhteys=mysqli_connect("db","root","password","Sodexo");
 }
 
 
