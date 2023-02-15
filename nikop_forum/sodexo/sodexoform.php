@@ -8,15 +8,13 @@
 <body>  
 
 <?php
-$website=isset($_POST["website"]) ? $_POST["website"] : "";
 $comment=isset($_POST["comment"]) ? $_POST["comment"] : "";
-$gender=isset($_POST["gender"]) ? $_POST["gender"] : "";
 $email=isset($_POST["email"]) ? $_POST["email"] : "";
 $name=isset($_POST["name"]) ? $_POST["name"] : "";
 
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$nameErr = $emailErr = "";
+$name = $email = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -38,27 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $emailErr = "Invalid email format";
     }
   }
-    
-  if (empty($_POST["website"])) {
-    $website = "";
-  } else {
-    $website = test_input($_POST["website"]);
-    // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-      $websiteErr = "Invalid URL";
-    }
-  }
 
   if (empty($_POST["comment"])) {
     $comment = "";
   } else {
     $comment = test_input($_POST["comment"]);
-  }
-
-  if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
-  } else {
-    $gender = test_input($_POST["gender"]);
   }
 }
 
@@ -79,16 +61,7 @@ function test_input($data) {
   E-mail: <input type="text" name="email" value="<?php echo $email;?>">
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
-  Website: <input type="text" name="website" value="<?php echo $website;?>">
-  <span class="error"><?php echo $websiteErr;?></span>
-  <br><br>
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <br><br>
-  Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
-  <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
@@ -99,11 +72,7 @@ echo $name;
 echo "<br>";
 echo $email;
 echo "<br>";
-echo $website;
-echo "<br>";
 echo $comment;
-echo "<br>";
-echo $gender;
 ?>
 
 
@@ -118,21 +87,21 @@ catch(Exception $e){
     header("Location:sodexoform.php");
     exit;
 }
-if (!empty($name) && !empty($email) && !empty($website) && !empty($comment) && !empty($gender)) {
+if (!empty($name) && !empty($email) && !empty($comment)) {
 
     
-    $sql="insert into henkilot (name,email,website,comment,gender) values(?,?,?,?,?)";
+    $sql="insert into henkilo (name,email,comment) values(?,?,?,?,?)";
     
     //Valmistellaan sql-lause
     $stmt=mysqli_prepare($yhteys, $sql);
     //Sijoitetaan muuttujat oikeisiin paikkoihin
-    mysqli_stmt_bind_param($stmt, 'sssss',$name,$email,$website,$comment,$gender);
+    mysqli_stmt_bind_param($stmt, 'ss',$name,$email,$comment);
     //Suoritetaan sql-lause
     mysqli_stmt_execute($stmt);
-    /*
-    header("Location:sodexoform.php");
+    
+    header("Location:forum.php");
     exit;
-    */
+    
     }
 ?>
 
