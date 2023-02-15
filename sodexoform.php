@@ -110,7 +110,7 @@ echo $gender;
 <?php
 try{
 
-    $yhteys=mysqli_connect("db","root","password","Sodexo");
+    $yhteys=mysqli_connect("db","root","password","sodexo");
 }
 
 
@@ -121,18 +121,18 @@ catch(Exception $e){
 if (!empty($name) && !empty($email) && !empty($website) && !empty($comment) && !empty($gender)) {
 
     
-    $sql="insert into henkilo (name,email,website,comment,gender) values(?,?,?,?,?)";
+    $sql="insert into henkilot (name,email,website,comment,gender) values(?,?,?,?,?)";
     
     //Valmistellaan sql-lause
     $stmt=mysqli_prepare($yhteys, $sql);
     //Sijoitetaan muuttujat oikeisiin paikkoihin
-    mysqli_stmt_bind_param($stmt, 'ss',$name,$email,$website,$comment,$gender);
+    mysqli_stmt_bind_param($stmt, 'sssss',$name,$email,$website,$comment,$gender);
     //Suoritetaan sql-lause
     mysqli_stmt_execute($stmt);
-    
-    header("Location:tallennus.php");
+    /*
+    header("Location:sodexoform.php");
     exit;
-    
+    */
     }
 ?>
 
