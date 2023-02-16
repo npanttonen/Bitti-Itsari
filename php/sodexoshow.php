@@ -15,7 +15,7 @@ if (!$yhteys) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT id, name, comment FROM MyGuests";
+$sql = "SELECT id, name, comment FROM sodexo";
 $result = mysqli_query($yhteys, $sql);
 
 if (mysqli_num_rows($result) > 0) {
