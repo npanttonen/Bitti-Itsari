@@ -28,16 +28,7 @@ if (!empty($username) && !empty($subject) && !empty($comment)) {
     
     header("location:forum.html");
     exit;
+} else {
+    header("location:forum.html");
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lisää henkilö</title>
-</head>
-<body>
-</body>
-</html>
