@@ -93,18 +93,7 @@ function test_input($data) {
   <input type="submit" name="submit" value="Submit">  
 </form>
 
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $website;
-echo "<br>";
-echo $comment;
-echo "<br>";
-echo $gender;
-?>
+
 
 
 <?php
@@ -135,7 +124,27 @@ if (!empty($name) && !empty($email) && !empty($website) && !empty($comment) && !
     */
     }
 ?>
+<?php
+$yhteys=mysqli_connect("db","root","password","sodexo");
+// Check connection
+if (!$yhteys) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+else{
+  echo"toimi";
+}
+$sqli = "SELECT id, name, comment FROM henkilot";
+$result = mysqli_query($yhteys, $sqli);
 
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+      echo "ID: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["comment"]. "<br>";
+  }
+} else {
+    echo "0 results";
+}
+?>
 
 </body>
 </html>
