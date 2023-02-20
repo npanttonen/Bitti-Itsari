@@ -10,15 +10,14 @@
     <title>Coffee shop Menu</title>
 </head>
 <script>
-    
     function comment(){
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("commmet").innerHTML = this.responseText;
+                document.getElementById("comment").innerHTML = this.responseText;
           }
         };
-        xmlhttp.open("GET", "./comment.php", true);
+        xmlhttp.open("POST", "./comment.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send();	
     }
@@ -30,14 +29,14 @@
    </header> 
    <kuva><img src="assets/images/coffeeBeans4.jpg" alt="coffeeBeans"></kuva>
    <main>
-    
-    <form>
+     
+    <div id='comment'> 
         <button onclick="comment()">comment</button>
-    </form>
-    <div id='comment'>
-        <p></p>
     </div>
-    <post>
+    <?php 
+    include('readcomment.php')
+    ?>
+
    </main>
    <footer>
     <address>

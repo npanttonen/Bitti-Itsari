@@ -24,3 +24,15 @@ if (mysqli_num_rows($result) > 0) {
     echo "0 results";
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sodexo, Menu">
+
+    <title>Coffee shop Menu</title>
+</head>
+</html>

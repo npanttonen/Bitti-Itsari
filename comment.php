@@ -8,21 +8,6 @@ catch(Exception $e){
     header("Location:../html/yhteysvirhe.html");
     exit;
 }
-// define variables and set to empty values
-$commentErr = $subjectErr = "";
-$username = $email = $comment = "";
-
-if (empty($_POST["subject"])) {
-  $subjectErr = "Subject is required";
-} else {
-  $subjectErr = test_input($_POST["subject"]);
-}
-
-if (empty($_POST["comment"])) {
-  $commentErr = "Comment field is empty";
-} else {
-  $comment = test_input($_POST["comment"]);
-}
 ?>
 <!DOCTYPE HTML>  
 <html>
@@ -31,8 +16,7 @@ if (empty($_POST["comment"])) {
 .error {color: #FF0000;}
 </style>
 </head>
-<body> 
- 
+<body>  
 <form action="senduser.php" method="post">
   <p>username:</p>  
   <input type="text" name="username" value="">
@@ -43,21 +27,7 @@ if (empty($_POST["comment"])) {
   <br><br>
   <input type="submit" name="ok" value="comment">
 </form>
-<?php
-echo "<h2>Previus comments:</h2>";
-$sqli = "SELECT  * FROM comment";
-$result = mysqli_query($yhteys, $sqli);
 
-if (mysqli_num_rows($result) > 0) {
-    
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-      echo "" . $row["username"]. "- Subject: " . $row["subject"]. " Comment: " . $row["comment"]. "<br>"; 
-    }
-   
-} else {
-    echo "0 results";
-}
-?>
+
 </body>
 </html>
