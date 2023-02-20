@@ -1,0 +1,55 @@
+<body>
+<script>
+function lahetaKala(lomake){
+	var kala=new Object();
+	kala.id=lomake.id.value;
+	kala.laji=lomake.laji.value;
+	kala.paino=lomake.paino.value;
+	var jsonKala=JSON.stringify(kala);
+	jsonKentta.innerHTML=jsonKala;
+	
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+		    document.getElementById("result").innerHTML = this.responseText;
+	  }
+	};
+	xmlhttp.open("POST", "./lisaakala.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("kala=" + jsonKala);	
+}
+
+
+
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+		    document.getElementById("muokattava").innerHTML = this.responseText;
+			kala=JSON.parse(this.responseText);
+			kalalomake.laji.value=kala.laji;
+			kalalomake.paino.value=kala.paino;
+}
+	};
+	xmlhttp.open("GET", "./haekalat.php?muokattava="+indeksi , true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send();	
+
+</script>
+
+<h2>Fill in!</h2>
+<form id='kalalomake'>
+	ID: <input type='text' name="id" value=" " placeholder="id" readonly><br>
+Laji: <input type='text' name='laji' value='' placeholder='kalan laji...'><br>
+Paino: <input type='text' name='paino' value='' placeholder='kalan paino...'><br>
+<input type='button' name='ok' value='Lähetä' onclick='lahetaKala(this.form);'><br>
+</form>
+<button onclick="haeKalat();">Hae kalat</button>"
+<div id='muokattava'></div>
+muokattava kala tähän
+<div id='result'>
+Palaute tähän
+</div>
+<div id='jsonkentta'>
+	Palaute tähän
+</div>
+</body>

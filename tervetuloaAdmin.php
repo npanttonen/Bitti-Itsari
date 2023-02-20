@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +19,21 @@
    </header> 
    <kuva><img id="coffee1"src="assets/images/coffeeBeans4.jpg" alt="coffeeBeans"></kuva>
    <main>
-    <article>
-        <img class="articleimg" src="assets/images/sodexobuilding.jpg" alt="sodexobuilding">
-        <h1>Sodexon kahvila </h1> 
-        <h2> Lounasravintolat, kahvilat, kokouspaikat ja juhlatilat ympäri Suomen. </h2>
-        <p> Sodexon ravintolat eri puolilla Suomea tarjoavat herkullista lounasta ja makua päivään. Meiltä löydät myös parhaat puitteet kokouksiin ja juhliin. Teemme päivittäin työtä tarjotaksemme hyvää, laadukasta ruokaa sekä erinomaisia asiakaskokemuksia. Tyypillisenä arkipäivänä Suomen ravintolamme palvelevat yli 200 000 vierasta. Ravintolamme myös työllistävät tuhansia suomalaisia.</p>
-    </article>
+<?php
+if (!isset($_SESSION["credentials"])){
+    header("Location:/kirjauduajax.html");
+    exit;
+}
+
+print "<h2>Welcome administrator, ".$_SESSION["credentials"]."!</h2>";
+
+
+?>
+<a href='./tallennakahvio.php'>Edit users</a>
+<br>
+<br>
+<br>
+<br>
    </main>
     <footer>
         <address>
@@ -32,6 +44,10 @@
                 <li>p. 010 540 7000</li>
                 <li>neuvo.fms.fi@sodexo.com</li>
                 <li>etunimi.sukunimi@sodexo.com</li>
+                <linkki>
+                <li><a href="kirjauduajax.html">login</a> </li>
+                <a href='kirjauduulos.php'>Kirjaudu ulos</a>
+                </linkki>
             </ul>
            
         </address>
