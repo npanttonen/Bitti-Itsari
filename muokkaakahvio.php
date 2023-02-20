@@ -53,8 +53,8 @@ if (!$rivi=mysqli_fetch_object($tulos)){
 
 <form action='./paivitakahvio.php' method='post'>
 id:<input type='text' name='id' value='<?php print $rivi->id;?>' readonly><br>
-username:<input type='text' name='username' value='<?php print $rivi->username;?>'><br>
-password:<input type='text' name='password' value='<?php print $rivi->password;?>'><br>
+Username:<input type='text' name='username' value='<?php print $rivi->username;?>'><br>
+Password:<input type='text' name='password' value='<?php print $rivi->password;?>'><br>
 <input type='submit' name='ok' value='ok'><br>
 </form>
 

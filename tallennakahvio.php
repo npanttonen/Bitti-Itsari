@@ -87,17 +87,7 @@ mysqli_close($yhteys);
                 <li>p. 010 540 7000</li>
                 <li>neuvo.fms.fi@sodexo.com</li>
                 <li>etunimi.sukunimi@sodexo.com</li>
-                <?php
-                if (isset($_SESSION['kayttaja']) && $_SESSION['kayttaja'] === true) {
-    // näytä kirjautumisulospainike
-    echo '<form action="logout.php" method="post">';
-    echo '<input type="submit" value="Kirjaudu ulos">';
-    echo '</form>';
-} else {
-    // näytä kirjautumisnappula
-    echo '<a href="login.php">Kirjaudu sisään</a>';
-}
-?>
+                <li><a href="kirjauduajax.html">login</a> </li>
             </ul>
            
         </address>
