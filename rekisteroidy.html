@@ -16,12 +16,39 @@
    </header> 
    <kuva><img id="coffee1"src="assets/images/coffeeBeans4.jpg" alt="coffeeBeans"></kuva>
    <main>
-    <article>
-        <img class="articleimg" src="assets/images/sodexobuilding.jpg" alt="sodexobuilding">
-        <h1>Sodexon kahvila </h1> 
-        <h2> Lounasravintolat, kahvilat, kokouspaikat ja juhlatilat ympäri Suomen. </h2>
-        <p> Sodexon ravintolat eri puolilla Suomea tarjoavat herkullista lounasta ja makua päivään. Meiltä löydät myös parhaat puitteet kokouksiin ja juhliin. Teemme päivittäin työtä tarjotaksemme hyvää, laadukasta ruokaa sekä erinomaisia asiakaskokemuksia. Tyypillisenä arkipäivänä Suomen ravintolamme palvelevat yli 200 000 vierasta. Ravintolamme myös työllistävät tuhansia suomalaisia.</p>
-    </article>
+    <login> 
+    <script>
+		
+function lahetaKayttaja(lomake){
+	var user=new Object();
+	user.username=lomake.username.value;
+	user.password=lomake.password.value;
+	var jsonUser=JSON.stringify(user);
+	
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("result").innerHTML = "User has been created";
+	  }
+	};
+	xmlhttp.open("POST", "rekisteroidy.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("user=" + jsonUser);	
+}
+</script>
+
+<h2>Sign up</h2>
+<form id='userlomake'>
+Username: <input type='text' name='username' value='' placeholder='username...'><br>
+Password: <input type='password' name='password' value='' placeholder='password...'><br>
+<input type='button' name='ok' value='Send' onclick='lahetaKayttaja(this.form);'><br>
+</form>
+<p id='result'>
+
+</p>
+
+</body>
+</html>
    </main>
     <footer>
         <address>
@@ -32,6 +59,7 @@
                 <li>p. 010 540 7000</li>
                 <li>neuvo.fms.fi@sodexo.com</li>
                 <li>etunimi.sukunimi@sodexo.com</li>
+                <li><a href="kirjauduajax.html">login</a> </li>
             </ul>
            
         </address>

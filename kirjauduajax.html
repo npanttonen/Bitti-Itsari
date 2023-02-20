@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <header>
+    <a href="Home.html"><img src="assets/images/2560px-Sodexo_logo.svg.png" 
+        width="10%"; 
+        height="auto" /></a>
+    <h3> <a href="Home.html">Home</a> &ensp; &ensp;&ensp;<a href="Menu.html">Menu</a> &ensp; &ensp;&ensp;<a href="OpenTime.html">Open time</a> &ensp; &ensp;&ensp;<a href="AboutUs.html">About us</a></h3>
+   </header> 
+   <kuva><img id="coffee1"src="assets/images/coffeeBeans4.jpg" alt="coffeeBeans"></kuva>
+   <main>
+    <login> 
+    <script>
+		
+function lahetaKayttaja(lomake){
+	var user=new Object();
+	user.username=lomake.username.value;
+	user.password=lomake.password.value;
+	var jsonUser=JSON.stringify(user);
+	
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+		    if (this.responseText=="admin"){
+		    	window.location.assign("/bitti-itsari/tervetuloaAdmin.php");
+		    }
+            else if (this.responseText=="user"){
+		    	window.location.assign("/bitti-itsari/tervetuloa.php");
+            }
+		    else{
+			    document.getElementById("result").innerHTML = "User not found";
+		    }
+	  }
+	};
+	xmlhttp.open("POST", "kirjauduajax.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("user=" + jsonUser);	
+
+}
+
+
+</script>
+<h2>Login</h2>
+<form id='userlomake'>
+Username: <input type='text' name='username' value='' placeholder='Username...'><br>
+Password: <input type='password' name='password' value='' placeholder='password...'><br>
+<input type='button' name='ok' value='Send' onclick='lahetaKayttaja(this.form);'><br>
+</form>
+<p id='result'>
+    
+</p>
+
+<p> No account? Click <a href="rekisteroidy.html">here</a></p>
+</body>
+</html>
+   </main>
+    <footer>
+        <address>
+            <ul class="list">
+                <li><b>Sodexo Oy</b></li>
+                <li>Vankanlähde 9</li>
+                <li>13100 Hämeenlinna</li>
+                <li>p. 010 540 7000</li>
+                <li>neuvo.fms.fi@sodexo.com</li>
+                <li>etunimi.sukunimi@sodexo.com</li>
+                <li><a href="kirjauduajax.html">login</a> </li>
+            </ul>
+           
+        </address>
+    </footer>
+   
+</body>
+</html>
