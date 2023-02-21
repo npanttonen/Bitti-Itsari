@@ -18,6 +18,8 @@ catch(Exception $e){
 </head>
 <body>  
 <form action="senduser.php" method="post">
+  <p>username:</p>  
+  <input type="text" name="username" value="">
   <p>subject:</p>
   <input type="text" name="subject" value="" required>
   <p>comment:</p>
