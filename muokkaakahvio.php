@@ -1,3 +1,33 @@
+<?php
+session_start();
+
+// Define MySQL server credentials
+$username = "root";
+$password = "password";
+$dbname = "kahvio";
+
+// Create connection
+$conn = mysqli_connect("db", $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Could not connect to MySQL server: " . mysqli_connect_error());
+}
+
+// Check if user has admin privileges
+$credentials = $_SESSION["credentials"];
+$query = "SELECT admin FROM credentials WHERE username='$credentials'";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
+$admin = $row["admin"];
+
+// Redirect non-admin users to login page
+if (!$admin) {
+    header("Location: /kirjauduajax.html");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +105,7 @@ mysqli_close($yhteys);
             <li>p. 010 540 7000</li>
             <li>neuvo.fms.fi@sodexo.com</li>
             <li>etunimi.sukunimi@sodexo.com</li>
-            <li><a href="kirjauduajax.html">login</a> </li>
+            <a href='kirjauduulos.php'>Kirjaudu ulos</a>
         </ul>
        
     </address>

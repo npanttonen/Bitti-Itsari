@@ -45,7 +45,7 @@ print "<h2>Welcome administrator, ".$_SESSION["credentials"]."!</h2>";
                 <li>neuvo.fms.fi@sodexo.com</li>
                 <li>etunimi.sukunimi@sodexo.com</li>
                 <linkki>
-                <li><a href="kirjauduajax.html">login</a> </li>
+                
                 <a href='kirjauduulos.php'>Kirjaudu ulos</a>
                 </linkki>
             </ul>
