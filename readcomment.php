@@ -9,7 +9,7 @@ catch(Exception $e){
     exit;
 }
 
-echo "<h2>Previus comments:</h2>";
+echo "<h2>Previous comments:</h2>";
 $sqli = "SELECT  * FROM comment";
 $result = mysqli_query($yhteys, $sqli);
 
