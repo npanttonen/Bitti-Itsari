@@ -35,7 +35,7 @@ session_start();
                ";
         }else {
             echo "<a href='Login_Home.php'><img src='assets/images/2560px-Sodexo_logo.svg.png' width='130' height='44' alt='SodexoLogo' /></a>
-   <h3><a href='Login_Home.php'>Home</a> &ensp; <a href='Login_Menu.php'>Menu</a> &ensp; <a href='Login_OpenTime.php'>Open time</a> &ensp; <a href='Login_AboutUs.php'>About us</a> &ensp; &ensp;&ensp;<a href='forum.php'>Forum</a></h3>
+   <h3><a href='Login_Home.php'>Home</a> &ensp; <a href='Login_Menu.php'>Menu</a> &ensp; <a href='Login_OpenTime.php'>Open time</a> &ensp; <a href='Login_AboutUs.php'>About us</a> &ensp;<a href='forum.php'>Forum</a></h3>
    ";
         }
         ?>
