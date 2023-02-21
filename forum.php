@@ -28,8 +28,18 @@ session_start();
 </script>
 <body>
    <header>
-   <a href="index.html"><img src="assets/images/2560px-Sodexo_logo.svg.png" width="130" height="44" alt="SodexoLogo" /></a>
-   <h3> <a href="index.html">Home</a> &ensp; &ensp;&ensp;<a href="Menu.html">Menu</a> &ensp; &ensp;&ensp;<a href="OpenTime.html">Open time</a> &ensp; &ensp;&ensp;<a href="AboutUs.html">About us</a>&ensp; &ensp;&ensp;<a href="forum.php">Forum</a></h3>
+        <?php
+        if (!isset($_SESSION["credentials"])){
+            echo  "<a href='index.html'><img src='assets/images/2560px-Sodexo_logo.svg.png' width='130' height='44' alt='SodexoLogo' /></a>
+            <h3> <a href='index.html'>Home</a> &ensp; &ensp;&ensp;<a href='Menu.html'>Menu</a> &ensp; &ensp;&ensp;<a href='OpenTime.html'>Open time</a> &ensp; &ensp;&ensp;<a href='AboutUs.html'>About us</a>&ensp; &ensp;&ensp;<a href='forum.php'>Forum</a></h3>
+               ";
+        }else {
+            echo "<a href='Login_Home.php'><img src='assets/images/2560px-Sodexo_logo.svg.png' width='130' height='44' alt='SodexoLogo' /></a>
+   <h3><a href='Login_Home.php'>Home</a> &ensp; <a href='Login_Menu.php'>Menu</a> &ensp; <a href='Login_OpenTime.php'>Open time</a> &ensp; <a href='Login_AboutUs.php'>About us</a> &ensp; &ensp;&ensp;<a href='forum.php'>Forum</a></h3>
+   ";
+        }
+        ?>
+   
    </header> 
    <kuva><img src="assets/images/coffeeBeans4.jpg" alt="coffeeBeans"></kuva>
    <main>
@@ -56,7 +66,18 @@ session_start();
             <li>p. 010 540 7000</li>
             <li>neuvo.fms.fi@sodexo.com</li>
             <li>etunimi.sukunimi@sodexo.com</li>
-            <li><a href="kirjauduajax.html">login</a> </li>
+            <li>   
+                 <?php
+        if (!isset($_SESSION["credentials"])){
+            echo "<a href='kirjauduajax.html'>Login</a>";
+        }else {
+             echo "<a href='kirjauduulos.php'>Logout</a>";
+        }
+        ?>
+        
+                
+            
+
         </ul>
        
     </address>

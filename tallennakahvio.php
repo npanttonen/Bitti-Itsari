@@ -45,10 +45,10 @@ table {
 </head>
 <body>
    <header>
-    <a href="Home.html"><img src="assets/images/2560px-Sodexo_logo.svg.png" 
+    <a href="Login_Home.php"><img src="assets/images/2560px-Sodexo_logo.svg.png" 
         width="10%"; 
         height="auto" /></a>
-    <h3> <a href="Home.html">Home</a> &ensp; &ensp;&ensp;<a href="Menu.html">Menu</a> &ensp; &ensp;&ensp;<a href="OpenTime.html">Open time</a> &ensp; &ensp;&ensp;<a href="AboutUs.html">About us</a></h3>
+        <h3><a href="Login_Home.php">Home</a> &ensp; <a href="Login_Menu.php">Menu</a> &ensp; <a href="Login_OpenTime.php">Open time</a> &ensp; <a href="Login_AboutUs.php">About us</a> &ensp; &ensp;&ensp;<a href="forum.php">Forum</a></h3>
    </header> 
    <kuva><img id="coffee1"src="assets/images/coffeeBeans4.jpg" alt="coffeeBeans"></kuva>
    <main>
