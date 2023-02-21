@@ -1,7 +1,3 @@
-<?php
-session_start();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,23 +25,18 @@ session_start();
 <body>
    <header>
    <a href="index.html"><img src="assets/images/2560px-Sodexo_logo.svg.png" width="130" height="44" alt="SodexoLogo" /></a>
-   <h3> <a href="index.html">Home</a> &ensp; &ensp;&ensp;<a href="Menu.html">Menu</a> &ensp; &ensp;&ensp;<a href="OpenTime.html">Open time</a> &ensp; &ensp;&ensp;<a href="AboutUs.html">About us</a>&ensp; &ensp;&ensp;<a href="forum.php">Forum</a></h3>
+    <h3><a href="index.html">Home</a> &ensp; <a href="Menu.html">Menu</a> &ensp; <a href="OpenTime.html">Open time</a> &ensp; <a href="AboutUs.html">About us</a></h3>
    </header> 
    <kuva><img src="assets/images/coffeeBeans4.jpg" alt="coffeeBeans"></kuva>
    <main>
+     
     <div id='comment'> 
-        <?php
-        if (!isset($_SESSION["credentials"])){
-            echo "<a href='kirjauduajax.html'>Kirjaudu sisään</a>";
-        }else {
-            echo "<button onclick='comment()'>comment</button>";
-        }
-        ?>
-        
+        <button onclick="comment()">comment</button>
     </div>
     <?php 
     include('readcomment.php')
     ?>
+
    </main>
    <footer>
     <address>

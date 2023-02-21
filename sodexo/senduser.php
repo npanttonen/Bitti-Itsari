@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-$username = $_SESSION["credentials"];
+$username = isset($_POST["username"]) ? $_POST["username"] : "";
 $subject = isset($_POST["subject"]) ? $_POST["subject"] : "";
 $comment=isset($_POST["comment"]) ? $_POST["comment"] : []; //, koska lomakkeela Tuloksena taulukkola name='mielijuoma[]'
 
